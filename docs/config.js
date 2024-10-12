@@ -10,7 +10,7 @@ function loadConfig() {
     twitch.configuration.onChanged(() => {
         if (twitch.configuration.broadcaster) {
             const config = JSON.parse(twitch.configuration.broadcaster.content);
-            document.getElementById('apiUrl').value = config.apiUrl || 'https://httpbin.org/json';
+            document.getElementById('apiUrl').value = config.apiUrl || 'http://3.113.85.237:18080/data';
         }
     });
 }

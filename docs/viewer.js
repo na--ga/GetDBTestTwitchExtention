@@ -13,10 +13,10 @@ twitch.configuration.onChanged(() => {
     }
 });
 
-let apiUrl = 'https://httpbin.org/json';
+let apiUrl = 'http://3.113.85.237:18080/data';
 
 function updateApiUrl(newUrl) {
-    apiUrl = newUrl || 'https://httpbin.org/json';
+    apiUrl = newUrl || 'http://3.113.85.237:18080/data';
     fetchData();
 }
 
@@ -34,7 +34,30 @@ function fetchData() {
 
 function displayData(data) {
     const container = document.getElementById('dataContainer');
-    container.innerHTML = '<pre>' + JSON.stringify(data, null, 2) + '</pre>';
+    if (data.error) {
+        container.innerHTML = `<p>Error: ${data.error}</p>`;
+        return;
+    }
+
+    let tableHTML = `
+        <table>
+            <tr>
+                <th>Citizen ID</th>
+                <th>Name</th>
+            </tr>
+    `;
+
+    data.forEach(player => {
+        tableHTML += `
+            <tr>
+                <td>${player.citizenid}</td>
+                <td>${player.name}</td>
+            </tr>
+        `;
+    });
+
+    tableHTML += '</table>';
+    container.innerHTML = tableHTML;
 }
 
 document.getElementById('fetchDataBtn').addEventListener('click', fetchData);
