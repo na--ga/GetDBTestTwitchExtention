@@ -26,7 +26,7 @@
             display: block;
             margin-top: 10px;
         }
-        input, select {
+        input {
             width: 100%;
             padding: 5px;
             margin-top: 5px;
@@ -43,26 +43,17 @@
             background-color: #7D5BBE;
         }
     </style>
+    <script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"></script>
 </head>
 <body>
     <div class="container">
-        <h1>拡張機能設定</h1>
+        <h1>API設定</h1>
         <form id="configForm">
-            <label for="option1">オプション1:</label>
-            <input type="text" id="option1" name="option1"><br><br>
-            <label for="option2">オプション2:</label>
-            <select id="option2" name="option2">
-                <option value="選択肢1">選択肢1</option>
-                <option value="選択肢2">選択肢2</option>
-                <option value="選択肢3">選択肢3</option>
-            </select><br><br>
-            <label for="option3">オプション3:</label>
-            <input type="color" id="option3" name="option3"><br><br>
+            <label for="apiUrl">API URL:</label>
+            <input type="text" id="apiUrl" name="apiUrl" value="https://httpbin.org/json"><br><br>
             <button type="submit">設定を保存</button>
         </form>
     </div>
-
-    <script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"></script>
     <script src="config.js"></script>
 </body>
 </html>
