@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitch Overlay Extension</title>
+    <style>
+        body {
+            background-color: rgba(100, 65, 165, 0.7);
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 10px;
+            width: 300px;
+            height: auto;
+        }
+        h1 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        #optionsContainer {
+            margin-bottom: 10px;
+        }
+        #changeColorBtn {
+            background-color: #9146ff;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            font-size: 0.9em;
+            cursor: pointer;
+        }
+    </style>
+    <script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"></script>
+</head>
+<body>
+    <h1>Twitch Overlay Extension</h1>
+    <div id="optionsContainer"></div>
+    <button id="changeColorBtn">Change Color</button>
+    <script src="viewer.js"></script>
+</body>
+</html>
