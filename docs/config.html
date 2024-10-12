@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拡張機能設定</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #6441A4;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, select {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+        }
+        button {
+            background-color: #6441A4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #7D5BBE;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>拡張機能設定</h1>
+        <form id="configForm">
+            <label for="option1">オプション1:</label>
+            <input type="text" id="option1" name="option1"><br><br>
+            <label for="option2">オプション2:</label>
+            <select id="option2" name="option2">
+                <option value="選択肢1">選択肢1</option>
+                <option value="選択肢2">選択肢2</option>
+                <option value="選択肢3">選択肢3</option>
+            </select><br><br>
+            <label for="option3">オプション3:</label>
+            <input type="color" id="option3" name="option3"><br><br>
+            <button type="submit">設定を保存</button>
+        </form>
+    </div>
+
+    <script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"></script>
+    <script src="config.js"></script>
+</body>
+</html>
