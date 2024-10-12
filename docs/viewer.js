@@ -13,10 +13,10 @@ twitch.configuration.onChanged(() => {
     }
 });
 
-let apiUrl = 'http://3.113.85.237:18080/data';
+let apiUrl = 'https://gtatest.ddns.net:18080/data';
 
 function updateApiUrl(newUrl) {
-    apiUrl = newUrl || 'http://3.113.85.237:18080/data';
+    apiUrl = newUrl || 'https://gtatest.ddns.net:18080/data';
     fetchData();
 }
 
