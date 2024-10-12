@@ -6,16 +6,54 @@
     <title>Hello World Extension</title>
     <style>
         body {
-            background-color: #f3f3f3;
-            color: #333;
-            font-family: Arial, sans-serif;
+            background-color: #6441a5; /* Twitchのブランドカラー */
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
             text-align: center;
-            margin-top: 50px;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        #changeColorBtn {
+            background-color: #9146ff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #changeColorBtn:hover {
+            background-color: #7d2ff5;
         }
     </style>
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <p>This is a simple Twitch extension.</p>
+    <h1>Hello Twitch!</h1>
+    <p>This is a vibrant Twitch extension.</p>
+    <button id="changeColorBtn">Change Background Color</button>
+    <h2>Hello World Extension</h2>
+    <script>
+        const colors = ['#6441a5', '#9146ff', '#000000', '#ff0000', '#00ff00', '#0000ff'];
+        let currentColorIndex = 0;
+
+        document.getElementById('changeColorBtn').addEventListener('click', function() {
+            currentColorIndex = (currentColorIndex + 1) % colors.length;
+            document.body.style.backgroundColor = colors[currentColorIndex];
+        });
+    </script>
 </body>
 </html>
